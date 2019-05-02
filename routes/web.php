@@ -11,7 +11,7 @@ Auth::routes();
 Route::get('/logout','Auth\LoginController@logout');
 Route::resource('cart','CartController');
 
-Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
+Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
 
   Route::get('/',function(){
     return view('admin.index');
