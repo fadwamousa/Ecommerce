@@ -29,14 +29,14 @@
       <div class="small-3 columns">
           <div class="item-wrapper">
               <div class="img-wrapper">
-                  <a class="button expanded add-to-cart">
+                  <a href="{{ url('cart/'.$shirt->id.'/edit') }}" class="button expanded add-to-cart">
                       Add to Cart
                   </a>
 
                   <a href="{{ url('/shirt/'.$shirt->id) }}">
+                    <img src="  {{ $shirt->image ? $shirt->image : 'image-placeholder-350x350' }}" alt="">
 
-                      <img src="  {{ $shirt->image ? $shirt->image : 'image-placeholder-350x350' }}" alt="">
-                  </a>
+                   </a>
 
               </div>
               <a href="{{ url('/shirt/'.$shirt->id) }}">
@@ -53,6 +53,7 @@
           </div>
       </div>
     @endforeach
+    {{ $shirts->render() }}
     @endif
 </div>
 <!-- Footer -->

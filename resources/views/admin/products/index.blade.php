@@ -18,4 +18,6 @@
    @endif
  </ul>
 
+ {{ $products->render() }}
+
 @stop

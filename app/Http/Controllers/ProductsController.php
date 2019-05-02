@@ -11,7 +11,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = Product::all();
+        $products = Product::paginate(4);
         return view('admin.products.index',compact('products'));
     }
 
@@ -34,7 +34,7 @@ class ProductsController extends Controller
          }
 
          $products = Product::create($input);
-         return redirect('admin');
+         return redirect('admin/products');
 
     }
 

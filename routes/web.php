@@ -9,6 +9,7 @@ Route::get('/shirt/{shirt}','frontController@shirt');
 Auth::routes();
 Route::get('/logout','Auth\LoginController@logout');
 Route::get('/home','frontController@index')->name('home');
+Route::resource('cart','CartController');
 
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 
