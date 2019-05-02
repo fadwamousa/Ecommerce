@@ -15,6 +15,8 @@
                 <ul>
                     <li><a href="{{ url('admin/products') }}"> Product</a></li>
                     <li><a href="{{ url('admin/products/create') }}">Add Product</a></li>
+                    <li><a href="{{ url('admin/categories') }}">Categories</a></li>
+                    <li><a href="{{ url('admin/categories/create') }}">Add Category</a></li>
                 </ul>
             </li>
         </ul>

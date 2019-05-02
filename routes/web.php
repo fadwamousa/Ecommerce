@@ -17,5 +17,6 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
   })->name('admin.index');
 
   Route::resource('products','ProductsController');
+  Route::resource('categories','CategoriesController');
 
 });

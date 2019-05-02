@@ -16,9 +16,11 @@
                   </a>
 
                   <a href="{{ url('/shirt/'.$shirt->id) }}">
-
-                      <img src="  {{ $shirt->image ? $shirt->image : 'image-placeholder-350x350' }}" alt="">
+                      <img src="{{asset($shirt->image ?$shirt->image : 'http://i.imgur.com/Mcw06Yt.png')}}" alt="">
                   </a>
+
+
+
 
               </div>
               <a href="{{ url('/shirt/'.$shirt->id) }}">

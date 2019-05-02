@@ -10,8 +10,9 @@
          <div class="item-wrapper">
              <div class="img-wrapper">
                  <a href="#">
-                      <img src="http://i.imgur.com/Mcw06Yt.png"/>
-                 </a>
+                    <img src="{{ asset($shirt->image ? $shirt->image : 'http://i.imgur.com/Mcw06Yt.png') }}" alt="">
+              
+                </a>
              </div>
          </div>
      </div>
