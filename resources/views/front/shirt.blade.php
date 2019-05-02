@@ -11,7 +11,7 @@
              <div class="img-wrapper">
                  <a href="#">
                     <img src="{{ asset($shirt->image ? $shirt->image : 'http://i.imgur.com/Mcw06Yt.png') }}" alt="">
-              
+
                 </a>
              </div>
          </div>
@@ -38,7 +38,8 @@
 
                          </select>
                      </label>
-                     <a href="#" class="button  expanded">Add to Cart</a>
+                     <a class="button expanded add-to-cart" href="{{ url('cart/'.$shirt->id.'/edit') }}">
+                       Add to Cart</a>
                  </div>
              </div>
          <p class="text-left subheader"><small>* Designed by Fadwa</small></p>

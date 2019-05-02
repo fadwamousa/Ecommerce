@@ -50,7 +50,12 @@
                 </ol>
             </div>
         </div>
-        @yield('content')
+        <div class="container">
+
+          @yield('content')
+
+        </div>
+
 <footer class="footer">
   <div class="row full-width">
     <div class="small-12 medium-4 large-4 columns">
