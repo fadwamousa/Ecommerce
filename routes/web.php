@@ -21,3 +21,6 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']],function(){
   Route::resource('categories','CategoriesController');
 
 });
+
+Route::get('/checkout','CheckoutController@step1');
+Route::get('/shipping-info','CheckoutController@shipping')->name('checkout.shipping');

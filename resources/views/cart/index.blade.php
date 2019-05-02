@@ -53,16 +53,14 @@
         Grand Total Price ${{ Cart::total() }}
       </td>
       <td></td>
+      <td></td>
     </tr>
 
     </tbody>
 
   </table>
 
-
-  <a href="" class="button">CheckOut</a>
-
-
+  <a href="{{ url('checkout') }}" class="button">CheckOut</a>
 
 </div>
 
