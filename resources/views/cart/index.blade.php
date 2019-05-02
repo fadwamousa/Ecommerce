@@ -11,8 +11,8 @@
       <tr>
         <th>name</th>
         <th>Qty</th>
-        <th>price</th>
         <th>size</th>
+        <th>price</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -26,10 +26,16 @@
             {!!Form::model($cartItem,['method'=>'PATCH','action'=>['CartController@update',$cartItem->rowId]])!!}
                <input name="qty" type="text" value="{{ $cartItem->qty }}">
                <input type="submit" class="btn btn-default" value="OK">
-            {!!Form::close()!!}
+
+        </td>
+
+        <td>
+
+          {{ Form::select('size',['small'=>'Small','Meduim'=>'Meduim','large'=>'Large'],$cartItem->size) }}
+
+          {!!Form::close()!!}
         </td>
         <td>{{ $cartItem->price }}</td>
-        <td>{{ $cartItem->size?$cartItem->size:'' }}</td>
         <td>
           {!!Form::model($cartItem,['method'=>'DELETE','action'=>['CartController@destroy',$cartItem->rowId]])!!}
            <input type="submit" class="btn btn-danger" value="Delete">

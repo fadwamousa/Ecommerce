@@ -35,7 +35,6 @@
 
                   <a href="{{ url('/shirt/'.$shirt->id) }}">
                     <img src="  {{ $shirt->image ? $shirt->image : 'image-placeholder-350x350' }}" alt="">
-
                    </a>
 
               </div>
