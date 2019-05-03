@@ -6,7 +6,7 @@
 
   <h3>Shipping Information</h3>
 
-  {!!Form::open(['method'=>'POST','action'=>'CheckoutController@shipping'])!!}
+  {!!Form::open(['method'=>'POST','route'=>'address.store'])!!}
 
   <div class="form-group">
     {{ Form::label('addressline','AddressLine:') }}
@@ -34,13 +34,18 @@
     {{ Form::text('phone',null,['class'=>'form-control']) }}
   </div>
 
-  <div class="form-group">
-    {{ Form::submit('Done',['class'=>'btn btn-primary']) }}
-  </div>
-
-
-  {!!Form::close()!!}
-
+  {{ Form::submit('Proceed to Payment', array('class' => 'button success')) }}
+  {!! Form::close() !!}
 </div>
 
+
+@if(count($errors))
+
+  @foreach($errors->all() as $error)
+  <div class="alert alert-danger">
+    {{ $error }}
+  </div>
+  @endforeach
+
+@endif
 @stop

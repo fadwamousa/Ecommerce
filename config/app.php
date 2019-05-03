@@ -164,6 +164,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
+
+
         /*
          * Package Service Providers...
          */

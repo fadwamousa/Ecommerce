@@ -10,6 +10,7 @@
    @foreach($products as $product)
    <li>
      <h4>Name-product :: {{ $product->name }}</h4>
+     <h4>Category ::{{ $product->category ? $product->category->name : 'No Category shown' }}</h4>
 
    </li>
    @endforeach

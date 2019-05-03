@@ -38,7 +38,7 @@
 
                          </select>
                      </label>
-                     <a class="button expanded add-to-cart" href="{{ url('cart/'.$shirt->id.'/edit') }}">
+                    <a href="{{ url('cart/'.$shirt->id.'/edit') }}" class="button expanded add-to-cart">
                        Add to Cart</a>
                  </div>
              </div>

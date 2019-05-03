@@ -29,8 +29,9 @@
       <div class="small-3 columns">
           <div class="item-wrapper">
               <div class="img-wrapper">
-                  <a href="{{ url('cart/'.$shirt->id.'/edit') }}" class="button expanded add-to-cart">
-                      Add to Cart
+                  
+                  <a href="{{ url('cart/add-item/'.$shirt->id) }}" class="button expanded add-to-cart">
+                        Add to Cart
                   </a>
 
                   <a href="{{ url('/shirt/'.$shirt->id) }}">
