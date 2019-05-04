@@ -16,6 +16,9 @@
                     <li><a href="{{ url('admin/products') }}"> Product</a></li>
                     <li><a href="{{ url('admin/products/create') }}">Add Product</a></li>
                     <li><a href="{{ url('admin/categories') }}">Categories</a></li>
+                    <li><a href="{{ url('admin/orders/pending') }}">Pending Orders</a></li>
+                    <li><a href="{{ url('admin/orders/delivered') }}">Deliverd Orders</a></li>
+                    <li><a href="{{ url('admin/orders') }}">All Orders</a></li>
                 </ul>
             </li>
         </ul>

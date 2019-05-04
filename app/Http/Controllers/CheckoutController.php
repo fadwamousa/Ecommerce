@@ -12,14 +12,14 @@ use App\Order;
 class CheckoutController extends Controller
 {
 
-  public function step1(){
+  /*public function step1(){
 
     if(Auth::check()){
 
     return redirect()->route('checkout.shipping');
     }
     return redirect('login');
-  }
+  }*/
 
   public function shipping(){
 
@@ -50,10 +50,13 @@ class CheckoutController extends Controller
                  "description" => "Example charge"
              ));
 
-             return redirect('/cart');
+             //return redirect('/cart');
          } catch (\Stripe\Error\Card $e) {
              // The card has been declined
          }
+
+         //create
+         Order::createorder();
 
 
      }

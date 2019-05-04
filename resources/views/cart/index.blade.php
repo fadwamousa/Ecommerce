@@ -60,7 +60,7 @@
 
   </table>
 
-  <a href="{{ url('checkout') }}" class="button">CheckOut</a>
+  <a href="{{ route('checkout.shipping') }}" class="button">CheckOut</a>
 
 </div>
 
